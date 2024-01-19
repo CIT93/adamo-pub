@@ -1,5 +1,5 @@
 const myHeading = document.querySelector("h2");
-myHeading.textContent = total
+myHeading.textContent = total;
 const houseMembers = 6;
 const houseSize = 7;
 const food = 14;
