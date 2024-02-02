@@ -37,14 +37,23 @@ function calculateEP(homeSize) {
 
 
 function start(houseMembers, houseSize) {
-  const houseHoldPTS = determineHouseHoldPts(houseMembers[0]);
-  const houseSizePTS = calculateEP(houseSize[1]);
+  const houseHoldPTS = determineHouseHoldPts(houseMembers);
+  const houseSizePTS = calculateEP(houseSize);
   const total = houseHoldPTS + houseSizePTS;
-  cfpData.push([houseMembers, houseSize, calculateEP, total]);
+  cfpData.push([houseMembers, houseSize, houseHoldPTS, houseSizePTS, total]);
 }
 
 function displayOutput() {
-
+  for (arr of cfpData){
+    console.log(arr)
+    const output = document.getElementById("output");
+    const newP = document.createElement("p");
+    newP.textContent = `Carbon Footprint total is ${arr[4]}`;
+    const newP2 = document.createElement("p2")
+    newP2.textContent = `${arr[3]} for your ${arr[1]} home`
+    output.appendChild(newP);
+    output.appendChild(newP2);
+  }
 }
 
 start(5,"apartment");
