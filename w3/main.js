@@ -26,17 +26,19 @@ console.log(`Based on the number of members in the household of ${numberInHouseh
 //determineHouseHoldPts(3)
 //determineHouseHoldPts(4)
 
-function calculateEP (homeSize) {
-    if (homeSize === 'large') {
-        carbonfootprintpoints = carbonfootprintpoints + 10;
-    } else if (homeSize === 'medium') {
+function calculateEP(homeSize) {
+  if (homeSize === "large") {
+    carbonfootprintpoints = carbonfootprintpoints + 10;
+  } else if (homeSize === "medium") {
     carbonfootprintpoints = carbonfootprintpoints + 7;
-} else if (homeSize === 'small') {
+  } else if (homeSize === "small") {
     carbonfootprintpoints = carbonfootprintpoints + 4;
-} else if (homeSize === 'apartment') {
+  } else if (homeSize === "apartment") {
     carbonfootprintpoints = carbonfootprintpoints + 2;
-    console.log(`Based on your house size of ${homeSize} you have ${carbonfootprintpoints} points`)
-}
+    console.log(
+      `Based on your house size of ${homeSize} you have ${carbonfootprintpoints} points`
+    );
+  }
 } 
 determineHouseHoldPts (6);
 calculateEP('medium');
