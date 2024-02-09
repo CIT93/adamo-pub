@@ -68,13 +68,13 @@ function displayOutput() {
     const output = document.getElementById("output");
     const newP = document.createElement("h2");
     newP.textContent = `Carbon Footprint total ${obj.cfpTotal}`;
-    //const newH3 = document.createElement("h3");
-    //newH3.textContent = 'based on the number in and size of your home'
-    //const newP2 = document.createElement("p");
-    //newP2.textContent = `${arr[3]} for your ${arr[1]} home`;
+    const newH3 = document.createElement("h3");
+    newH3.textContent = `based on the ${obj.houseM} people in your home`;
+    const newP2 = document.createElement("p");
+    newP2.textContent = `you have ${obj.hsPts} points for your ${obj.houseS} home`;
     output.appendChild(newP);
-    //output.appendChild(newH3);
-    //output.appendChild(newP2);
+    output.appendChild(newH3);
+    output.appendChild(newP2);
   }
 }
 
