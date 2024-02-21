@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="main.js"></script>
-    <title>Week 5 - Carbon Footprint</title>
-</head>
-<body>
+    <title>Week 6 - Carbon Footprint - Public</title>
+    <style>
+      html {
+        font-size: 22px;
+      }
+      body {
+        background-color: #333;
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <fieldset>
+        <legend>Calculating Your Carbon Footprint Points</legend>
+        <div>
+            <label>First name:</label>
+            <input type="text" name="firstname" required/>
+        </div>
+        <div>
+            <label>Last name:</label>
+            <input type="text" name="lastname" required/>
+        </div>
+        <div>
+          <label>Count the members of your household</label>
+          <input type="number" name="housem" min="1" max="6" required/>
+      </div>
+      <div>
+        <label>Consider the Size of your Home</label>
+        <select name="houses" required>
+          <option value="">---Please Enter Size of your Home---</option>
+          <option value="apartment">Apartment</option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+    </div>
+        <button type="submit">submit</button>
+      </fieldset>
+    </form>
     <div id="output"></div>
-</body>
+  </body>
 </html>
